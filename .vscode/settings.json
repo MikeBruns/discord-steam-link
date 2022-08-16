@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "cSpell.words": [
+    "Bruns",
+    "openurl"
+  ]
+}
