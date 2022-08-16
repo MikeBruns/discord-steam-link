@@ -2,9 +2,13 @@ import { Client } from 'discord.js';
 
 import { DISCORD_TOKEN } from './env';
 
-let client = new Client(); // Initiates the client
+console.log(DISCORD_TOKEN);
+
+const x = 1;
+console.log(x);
+const client = new Client(); // Initiates the client
 client.botConfig = DISCORD_TOKEN; // Stores the config inside the client object so it's auto injected wherever we use the client
-client.botConfig.rootDir = __dirname; // Stores the running directory in the config so we don't have to traverse up directories.
+// client.botConfig.rootDir = __dirname; // Stores the running directory in the config so we don't have to traverse up directories.
 
 // Starts the bot and makes it begin listening to events.
 client.on('ready', () => {
@@ -25,6 +29,7 @@ client.on('message', (message) => {
   if (message.content.toLowerCase().includes(keyword)) {
     // const paragraph = 'https://steamcommunity.com/sharedfiles/filedetails/?id=2821914954';
     const regex =
+      // eslint-disable-next-line no-useless-escape
       /(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])/gm;
     const found = message.content.match(regex);
 

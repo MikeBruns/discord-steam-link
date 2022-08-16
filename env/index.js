@@ -1,11 +1,6 @@
-const APP_ID = process.env.APP_ID || '';
-const GUILD_ID = process.env.GUILD_ID || '';
-const DISCORD_TOKEN = process.env.DISCORD_TOKEN || '';
-const PUBLIC_KEY = process.env.PUBLIC_KEY || '';
+/* global process */
 
-module.exports = {
-  APP_ID,
-  GUILD_ID,
-  DISCORD_TOKEN,
-  PUBLIC_KEY,
-};
+export const APP_ID = process.env.APP_ID || '';
+export const GUILD_ID = process.env.GUILD_ID || '';
+export const DISCORD_TOKEN = process.env.DISCORD_TOKEN || '';
+export const PUBLIC_KEY = process.env.PUBLIC_KEY || '';

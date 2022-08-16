@@ -4,6 +4,10 @@
   "description": "Discord bot that converts steam links to deep links to the steam app",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -15,6 +19,7 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
+    "eslint": "^8.22.0",
     "ngrok": "^4.3.1",
     "nodemon": "^2.0.19",
     "prettier": "2.7.1",
