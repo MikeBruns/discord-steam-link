@@ -3,8 +3,5 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
-  "cSpell.words": [
-    "Bruns",
-    "openurl"
-  ]
+  "cSpell.words": ["Bruns", "openurl"]
 }
