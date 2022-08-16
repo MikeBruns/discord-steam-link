@@ -1,20 +1,14 @@
-import { Client } from 'discord.js';
-
+import { Client, ActivityType } from 'discord.js';
 import { DISCORD_TOKEN } from './env';
 
-console.log(DISCORD_TOKEN);
-
-const x = 1;
-console.log(x);
-const client = new Client(); // Initiates the client
-client.botConfig = DISCORD_TOKEN; // Stores the config inside the client object so it's auto injected wherever we use the client
-// client.botConfig.rootDir = __dirname; // Stores the running directory in the config so we don't have to traverse up directories.
+const client = new Client();
+client.botConfig = DISCORD_TOKEN;
 
 // Starts the bot and makes it begin listening to events.
 client.on('ready', () => {
   console.log('Bot Online');
   client.user.setActivity('Playing with myself pt. 2', {
-    type: 'STREAMING',
+    type: ActivityType.Streaming,
     url: 'https://www.youtube.com/watch?v=buSO5vSubxw',
   });
 });
