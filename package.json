@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Discord bot that converts steam links to deep links to the steam app",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"

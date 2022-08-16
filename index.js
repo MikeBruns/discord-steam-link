@@ -1,15 +1,10 @@
-const fs = require('fs'); // Loads the Filesystem library
-const { Client, Collection } = require('discord.js'); // Loads the discord API library
-const Config = require('./config.json'); // Loads the configuration values
-const BotLib = require('./lib/bot.js');
+import { Client } from 'discord.js';
 
-const client = new Client(); // Initiates the client
-client.botConfig = Config; // Stores the config inside the client object so it's auto injected wherever we use the client
+import { DISCORD_TOKEN } from './env';
+
+let client = new Client(); // Initiates the client
+client.botConfig = DISCORD_TOKEN; // Stores the config inside the client object so it's auto injected wherever we use the client
 client.botConfig.rootDir = __dirname; // Stores the running directory in the config so we don't have to traverse up directories.
-
-// Loads our handler functions that do all the work
-BotLib.loadHandlers(client, 'commands');
-BotLib.loadHandlers(client, 'keywords');
 
 // Starts the bot and makes it begin listening to events.
 client.on('ready', () => {
