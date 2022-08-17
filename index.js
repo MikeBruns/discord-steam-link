@@ -1,8 +1,14 @@
-import { Client, ActivityType } from 'discord.js';
+import { Client, GatewayIntentBits, ActivityType } from 'discord.js';
 import { DISCORD_TOKEN } from './env/index.js';
 
-const client = new Client();
-client.botConfig.token = DISCORD_TOKEN;
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+  ],
+});
+client.botConfig = { token: DISCORD_TOKEN };
 
 // Starts the bot and makes it begin listening to events.
 client.on('ready', () => {
@@ -14,7 +20,7 @@ client.on('ready', () => {
 });
 
 // Handle user messages
-client.on('message', (message) => {
+client.on('messageCreate', (message) => {
   // we don't want to part of our own shit dewy
   if (message.author.bot) return;
 
