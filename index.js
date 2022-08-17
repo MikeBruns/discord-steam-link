@@ -1,8 +1,8 @@
 import { Client, ActivityType } from 'discord.js';
-import { DISCORD_TOKEN } from './env';
+import { DISCORD_TOKEN } from './env/index.js';
 
 const client = new Client();
-client.botConfig = DISCORD_TOKEN;
+client.botConfig.token = DISCORD_TOKEN;
 
 // Starts the bot and makes it begin listening to events.
 client.on('ready', () => {
