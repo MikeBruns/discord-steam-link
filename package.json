@@ -13,7 +13,7 @@
     "dev": "nodemon index.js",
     "pm2:list": "pm2 list",
     "prod:reload": "pm2 reload steam-link",
-    "prod:start": "pm2 start npm -- start --name 'steam-link'",
+    "prod:start": "pm2 start npm --name=steam-link -- run start",
     "prod:stop": "pm2 stop steam-link",
     "dotenv:login": "npx dotenv-vault login",
     "dotenv:pull": "npx dotenv-vault pull",
