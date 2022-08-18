@@ -1,4 +1,6 @@
 /* global process */
+import { config } from 'dotenv';
+config();
 
 export const APP_ID = process.env.APP_ID || '';
 export const GUILD_ID = process.env.GUILD_ID || '';
