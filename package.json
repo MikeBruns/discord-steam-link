@@ -1,5 +1,5 @@
 {
-  "name": "simple-discord-js-bot",
+  "name": "discord-steam-link-bot",
   "version": "1.0.0",
   "description": "Discord bot that converts steam links to deep links to the steam app",
   "main": "index.js",
@@ -9,8 +9,15 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "DISCORD_TOKEN=123 node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "pm2:list": "pm2 list",
+    "prod:reload": "pm2 reload steam-link",
+    "prod:start": "pm2 start steam-link -- start",
+    "prod:stop": "pm2 stop steam-link",
+    "dotenv:login": "npx dotenv-vault login",
+    "dotenv:pull": "npx dotenv-vault pull",
+    "dotenv:push": "npx dotenv-vault push"
   },
   "author": "Michael Bruns",
   "dependencies": {
@@ -19,8 +26,10 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
+    "dotenv-vault": "^1.11.1",
     "eslint": "^8.22.0",
     "nodemon": "^2.0.19",
+    "pm2": "^5.2.0",
     "prettier": "2.7.1"
   }
 }

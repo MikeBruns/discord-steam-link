@@ -1,5 +1,9 @@
+// Setup environment variables
+import { config } from 'dotenv';
+config();
+
 import { Client, GatewayIntentBits, ActivityType } from 'discord.js';
-import { DISCORD_TOKEN } from './env/index.js';
+import { DISCORD_TOKEN } from './env/variables.js';
 
 const client = new Client({
   intents: [
