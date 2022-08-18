@@ -1,9 +1,6 @@
 import { Client, GatewayIntentBits, ActivityType } from 'discord.js';
 import { DISCORD_TOKEN } from './env/variables.js';
 
-// eslint-disable-next-line no-undef
-console.log(process.env.DISCORD_TOKEN);
-
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
