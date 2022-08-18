@@ -19,7 +19,7 @@ share a link like `https://steamcommunity.com/sharedfiles/filedetails/?id=284201
 
 ## Running the bot permanently
 
-You can run the bot using the given `pm2` npm scripts to manage starting and restarting the application. 
+Run the bot using the given `pm2` npm scripts to manage starting and restarting the application. You will have to leave your computer on for the bot to be active. Other option would be to host a server to not run your computer all the time.
 
 ## Developing
 `npm run dev`
